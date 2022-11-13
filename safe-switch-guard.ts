@@ -5,7 +5,7 @@ const safeGuard = (arg: never) => {
 type Languages = 'RU' | 'EN';
 
 const Languages = {
-    doSomethingFor: (val: string) => {
+    doSomethingFor: (val: string): unknown => {
         const language = val as Languages;
         switch (language) {
             case 'RU':

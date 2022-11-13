@@ -15,7 +15,9 @@ type Group = {
 }
 
 // get something by userId and GroupId
-const getSomething = ( user: UserId, group: GroupId ): any => {}
+const getSomething = ( user: UserId, group: GroupId ): unknown => {
+    return;
+}
 
 const user1: User = {
     id: '1234' as UserId,
