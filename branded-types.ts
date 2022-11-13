@@ -2,6 +2,18 @@
 type Branded<T, BTT extends string | symbol> = T & {
     readonly [key in BTT]: BTT
 }
+export type Unbrand<T> = T extends string
+    ? string
+    : T extends number
+        ? string
+        : T extends boolean
+            ? string
+            : T extends Date
+                ? Date
+                : T extends Array<infer AT>
+                    ? AT[]
+                    : unknown;
+
 type UserId = Branded<string, 'UserId'>
 type GroupId = Branded<string, 'GroupId'>
 type User = {
