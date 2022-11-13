@@ -11,6 +11,6 @@ type ProductWithImmutableIds = ImmutableProps<Product, 'id' | 'categoryId'>
 const product: ProductWithImmutableIds = {id: '1', 'categoryId': 2, name: 'Red carpet'}
 
 // Throws error
-product.id = '1'
+// product.id = '1'
 // Ok
 product.name = 'Green carpet'
